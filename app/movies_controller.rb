@@ -13,8 +13,6 @@ def can_be_created_with_a_hash_of_attributes
       in_theaters: false
   }
   movie = Movie.new(attributes)
-  movie.save
-  movie
 end
 
 def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
@@ -53,15 +51,11 @@ def can_be_found_updated_and_saved
   movie = Movie.create(title: "Awesome Flick")
   movie = Movie.find_by(title: "Awesome Flick")
   movie.update(title: "Even Awesomer Flick")
-  movie.save
-  movie
 end
 
 def can_update_using_update_method
   movie = Movie.create(title: "Wat?")
   movie.update(title: "Wat, huh?")
-  movie.save
-  movie
 end
 
 def can_update_multiple_items_at_once
